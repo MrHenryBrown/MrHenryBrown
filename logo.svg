@@ -3,7 +3,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink" height="200px" viewBox="0 0 900 200">
 
     <style type="text/css">
-        text {
+        text:hover {
         filter: url(#filter);
         fill: black;
         font-family: 'Share Tech Mono', sans-serif;
