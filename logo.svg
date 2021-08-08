@@ -1,80 +1,259 @@
 <svg version="1.1" id="Ebene_1"
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" height="200px" viewBox="0 0 900 200">
-
-    <style type="text/css">
-        text:hover {
-        filter: url(#filter);
-        fill: black;
-        font-family: 'Share Tech Mono', sans-serif;
-        font-size: 40px;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        }
-        svg {
-        width: fit-content;
-        height: 120px;
-        display: block;
-        position: relative;
-        overflow: hidden;
-        margin: 0 auto;
+    xmlns:xlink="http://www.w3.org/1999/xlink" height="200px" viewBox="-1500 0 2000 100">
+    <style>
+      svg {
         background: white;
-        margin-top: 40vh;
+        height: 100vh;
+        overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-perspective: 500px;
+        perspective: 500px;
+      }
+
+      g {
+        text-align: center
+      }
+
+      #ui {
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+      #ui .text {
+        position: absolute;
+        font-size: 10rem;
+        color: #fff;
+        line-height: 10rem;
+        font-family: "Anton", Impact, fantasy;
+        mix-blend-mode: screen;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+      #ui .text:nth-child(1) {
+        -webkit-clip-path: polygon(-30% 0, -20% 0, 10% 100%, 0% 100%);
+        clip-path: polygon(-30% 0, -20% 0, 10% 100%, 0% 100%);
+        -webkit-animation: wave 2000ms -10000ms ease-in-out infinite alternate;
+        animation: wave 2000ms -10000ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(2) {
+        -webkit-clip-path: polygon(-25% 0, -15% 0, 15% 100%, 5% 100%);
+        clip-path: polygon(-25% 0, -15% 0, 15% 100%, 5% 100%);
+        -webkit-animation: wave 2000ms -9800ms ease-in-out infinite alternate;
+        animation: wave 2000ms -9800ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(3) {
+        -webkit-clip-path: polygon(-20% 0, -10% 0, 20% 100%, 10% 100%);
+        clip-path: polygon(-20% 0, -10% 0, 20% 100%, 10% 100%);
+        -webkit-animation: wave 2000ms -9600ms ease-in-out infinite alternate;
+        animation: wave 2000ms -9600ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(4) {
+        -webkit-clip-path: polygon(-15% 0, -5% 0, 25% 100%, 15% 100%);
+        clip-path: polygon(-15% 0, -5% 0, 25% 100%, 15% 100%);
+        -webkit-animation: wave 2000ms -9400ms ease-in-out infinite alternate;
+        animation: wave 2000ms -9400ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(5) {
+        -webkit-clip-path: polygon(-10% 0, 0% 0, 30% 100%, 20% 100%);
+        clip-path: polygon(-10% 0, 0% 0, 30% 100%, 20% 100%);
+        -webkit-animation: wave 2000ms -9200ms ease-in-out infinite alternate;
+        animation: wave 2000ms -9200ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(6) {
+        -webkit-clip-path: polygon(-5% 0, 5% 0, 35% 100%, 25% 100%);
+        clip-path: polygon(-5% 0, 5% 0, 35% 100%, 25% 100%);
+        -webkit-animation: wave 2000ms -9000ms ease-in-out infinite alternate;
+        animation: wave 2000ms -9000ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(7) {
+        -webkit-clip-path: polygon(0% 0, 10% 0, 40% 100%, 30% 100%);
+        clip-path: polygon(0% 0, 10% 0, 40% 100%, 30% 100%);
+        -webkit-animation: wave 2000ms -8800ms ease-in-out infinite alternate;
+        animation: wave 2000ms -8800ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(8) {
+        -webkit-clip-path: polygon(5% 0, 15% 0, 45% 100%, 35% 100%);
+        clip-path: polygon(5% 0, 15% 0, 45% 100%, 35% 100%);
+        -webkit-animation: wave 2000ms -8600ms ease-in-out infinite alternate;
+        animation: wave 2000ms -8600ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(9) {
+        -webkit-clip-path: polygon(10% 0, 20% 0, 50% 100%, 40% 100%);
+        clip-path: polygon(10% 0, 20% 0, 50% 100%, 40% 100%);
+        -webkit-animation: wave 2000ms -8400ms ease-in-out infinite alternate;
+        animation: wave 2000ms -8400ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(10) {
+        -webkit-clip-path: polygon(15% 0, 25% 0, 55% 100%, 45% 100%);
+        clip-path: polygon(15% 0, 25% 0, 55% 100%, 45% 100%);
+        -webkit-animation: wave 2000ms -8200ms ease-in-out infinite alternate;
+        animation: wave 2000ms -8200ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(11) {
+        -webkit-clip-path: polygon(20% 0, 30% 0, 60% 100%, 50% 100%);
+        clip-path: polygon(20% 0, 30% 0, 60% 100%, 50% 100%);
+        -webkit-animation: wave 2000ms -8000ms ease-in-out infinite alternate;
+        animation: wave 2000ms -8000ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(12) {
+        -webkit-clip-path: polygon(25% 0, 35% 0, 65% 100%, 55% 100%);
+        clip-path: polygon(25% 0, 35% 0, 65% 100%, 55% 100%);
+        -webkit-animation: wave 2000ms -7800ms ease-in-out infinite alternate;
+        animation: wave 2000ms -7800ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(13) {
+        -webkit-clip-path: polygon(30% 0, 40% 0, 70% 100%, 60% 100%);
+        clip-path: polygon(30% 0, 40% 0, 70% 100%, 60% 100%);
+        -webkit-animation: wave 2000ms -7600ms ease-in-out infinite alternate;
+        animation: wave 2000ms -7600ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(14) {
+        -webkit-clip-path: polygon(35% 0, 45% 0, 75% 100%, 65% 100%);
+        clip-path: polygon(35% 0, 45% 0, 75% 100%, 65% 100%);
+        -webkit-animation: wave 2000ms -7400ms ease-in-out infinite alternate;
+        animation: wave 2000ms -7400ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(15) {
+        -webkit-clip-path: polygon(40% 0, 50% 0, 80% 100%, 70% 100%);
+        clip-path: polygon(40% 0, 50% 0, 80% 100%, 70% 100%);
+        -webkit-animation: wave 2000ms -7200ms ease-in-out infinite alternate;
+        animation: wave 2000ms -7200ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(16) {
+        -webkit-clip-path: polygon(45% 0, 55% 0, 85% 100%, 75% 100%);
+        clip-path: polygon(45% 0, 55% 0, 85% 100%, 75% 100%);
+        -webkit-animation: wave 2000ms -7000ms ease-in-out infinite alternate;
+        animation: wave 2000ms -7000ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(17) {
+        -webkit-clip-path: polygon(50% 0, 60% 0, 90% 100%, 80% 100%);
+        clip-path: polygon(50% 0, 60% 0, 90% 100%, 80% 100%);
+        -webkit-animation: wave 2000ms -6800ms ease-in-out infinite alternate;
+        animation: wave 2000ms -6800ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(18) {
+        -webkit-clip-path: polygon(55% 0, 65% 0, 95% 100%, 85% 100%);
+        clip-path: polygon(55% 0, 65% 0, 95% 100%, 85% 100%);
+        -webkit-animation: wave 2000ms -6600ms ease-in-out infinite alternate;
+        animation: wave 2000ms -6600ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(19) {
+        -webkit-clip-path: polygon(60% 0, 70% 0, 100% 100%, 90% 100%);
+        clip-path: polygon(60% 0, 70% 0, 100% 100%, 90% 100%);
+        -webkit-animation: wave 2000ms -6400ms ease-in-out infinite alternate;
+        animation: wave 2000ms -6400ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(20) {
+        -webkit-clip-path: polygon(65% 0, 75% 0, 105% 100%, 95% 100%);
+        clip-path: polygon(65% 0, 75% 0, 105% 100%, 95% 100%);
+        -webkit-animation: wave 2000ms -6200ms ease-in-out infinite alternate;
+        animation: wave 2000ms -6200ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(21) {
+        -webkit-clip-path: polygon(70% 0, 80% 0, 110% 100%, 100% 100%);
+        clip-path: polygon(70% 0, 80% 0, 110% 100%, 100% 100%);
+        -webkit-animation: wave 2000ms -6000ms ease-in-out infinite alternate;
+        animation: wave 2000ms -6000ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(22) {
+        -webkit-clip-path: polygon(75% 0, 85% 0, 115% 100%, 105% 100%);
+        clip-path: polygon(75% 0, 85% 0, 115% 100%, 105% 100%);
+        -webkit-animation: wave 2000ms -5800ms ease-in-out infinite alternate;
+        animation: wave 2000ms -5800ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(23) {
+        -webkit-clip-path: polygon(80% 0, 90% 0, 120% 100%, 110% 100%);
+        clip-path: polygon(80% 0, 90% 0, 120% 100%, 110% 100%);
+        -webkit-animation: wave 2000ms -5600ms ease-in-out infinite alternate;
+        animation: wave 2000ms -5600ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(24) {
+        -webkit-clip-path: polygon(85% 0, 95% 0, 125% 100%, 115% 100%);
+        clip-path: polygon(85% 0, 95% 0, 125% 100%, 115% 100%);
+        -webkit-animation: wave 2000ms -5400ms ease-in-out infinite alternate;
+        animation: wave 2000ms -5400ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(25) {
+        -webkit-clip-path: polygon(90% 0, 100% 0, 130% 100%, 120% 100%);
+        clip-path: polygon(90% 0, 100% 0, 130% 100%, 120% 100%);
+        -webkit-animation: wave 2000ms -5200ms ease-in-out infinite alternate;
+        animation: wave 2000ms -5200ms ease-in-out infinite alternate;
+      }
+      #ui .text:nth-child(26) {
+        -webkit-clip-path: polygon(95% 0, 105% 0, 135% 100%, 125% 100%);
+        clip-path: polygon(95% 0, 105% 0, 135% 100%, 125% 100%);
+        -webkit-animation: wave 2000ms -5000ms ease-in-out infinite alternate;
+        animation: wave 2000ms -5000ms ease-in-out infinite alternate;
+      }
+
+      @-webkit-keyframes wave {
+        0% {
+          -webkit-transform: translate(-50%, -50%) scale(0.9) rotateX(20deg)
+            rotateY(20deg);
+          transform: translate(-50%, -50%) scale(0.9) rotateX(20deg)
+            rotateY(20deg);
+          color: #f03939;
         }
+        100% {
+          -webkit-transform: translate(-50%, -50%) scale(1.1) rotateX(0deg)
+            rotateY(0deg);
+          transform: translate(-50%, -50%) scale(1.1) rotateX(0deg)
+            rotateY(0deg);
+          color: #ed51ff;
+        }
+      }
+
+      @keyframes wave {
+        0% {
+          -webkit-transform: translate(-50%, -50%) scale(0.9) rotateX(20deg)
+            rotateY(20deg);
+          transform: translate(-50%, -50%) scale(0.9) rotateX(20deg)
+            rotateY(20deg);
+          color: #f03939;
+        }
+        100% {
+          -webkit-transform: translate(-50%, -50%) scale(1.1) rotateX(0deg)
+            rotateY(0deg);
+          transform: translate(-50%, -50%) scale(1.1) rotateX(0deg)
+            rotateY(0deg);
+          color: #ed51ff;
+        }
+      }
     </style>
-    <defs>
-        <filter id="filter">
-            <feFlood flood-color="transparent" result="transparent" />
-            <feFlood flood-color="#6affa2" result="flood1" />
-            <feFlood flood-color="#ff6aa2" result="flood2" />
-            <feOffset in="SourceGraphic" dx="5" dy="0" result="off1a"/>
-            <feOffset in="SourceGraphic" dx="3" dy="0" result="off1b"/>
-            <feOffset in="SourceGraphic" dx="-5" dy="0" result="off2a"/>
-            <feOffset in="SourceGraphic" dx="-3" dy="0" result="off2b"/>
-            <feComposite in="flood1" in2="off1a" operator="in" result="comp1" />
-            <feComposite in="flood2" in2="off2a" operator="in" result="comp2" />
-            <feMerge x="0" width="100%" result="merge1">
-                <feMergeNode in = "transparent" />
-                <feMergeNode in = "comp1" />
-                <feMergeNode in = "off1b" />
-                <animate attributeName="y"
-                        id = "y"
-                        dur ="4s"
-                        values = '104px; 104px; 30px; 105px; 30px; 2px; 2px; 50px; 40px; 105px; 105px; 20px; 6ßpx; 40px; 104px; 40px; 70px; 10px; 30px; 104px; 102px'
-                        keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
-                        repeatCount = "indefinite" />
-                <animate attributeName="height"
-                        id = "h"
-                        dur ="4s"
-                        values = '10px; 0px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'
-                        keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
-                        repeatCount = "indefinite" />
-            </feMerge>
-            <feMerge x="0" width="100%" y="60px" height="65px" result="merge2">
-                <feMergeNode in = "transparent" />
-                <feMergeNode in = "comp2" />
-                <feMergeNode in = "off2b" />
-                <animate attributeName="y"
-                        id = "y"
-                        dur ="4s"
-                        values = '103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;'
-                        keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1'
-                            repeatCount = "indefinite" />
-                <animate attributeName="height"
-                        id = "h"
-                        dur = "4s"
-                        values = '0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px'
-                        keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513;  1'
-                        repeatCount = "indefinite" />
-            </feMerge>
-            <feMerge>
-                <feMergeNode in="SourceGraphic" />
-                <feMergeNode in="merge1" />
-                <feMergeNode in="merge2" />
-            </feMerge>
-        </filter>
-    </defs>
-    <g>
-        <text id="message-text" x="0" y="50%">README</text>
+    <g id="ui">
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
+      <text class="text">ACCESS DENIED</text>
     </g>
 </svg>
