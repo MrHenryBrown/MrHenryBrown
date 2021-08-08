@@ -1,10 +1,9 @@
 <svg version="1.1" id="Ebene_1"
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" height="300px" viewBox="-1500 0 2000 300">
+    xmlns:xlink="http://www.w3.org/1999/xlink" height="500px" viewBox="-1500 0 2000 500">
     <style>
       svg {
         background: white;
-        height: 100vh;
         overflow: hidden;
         display: -webkit-box;
         display: -ms-flexbox;
